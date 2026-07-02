@@ -13,5 +13,17 @@ jobs:
 
       - name: print the name 
         run: echo "Hello Madhav"
+
+  prints:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: checkount 
+        uses: actions/checkout@v4
+      - name: print the OS name 
+        run: echo " windows"
+        
+        
+   
         
      
