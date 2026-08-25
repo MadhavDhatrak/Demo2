@@ -1,0 +1,31 @@
+name: Ci test 
+
+
+on:
+ push:
+   branches:
+     - main 
+
+jobs:
+  build:
+     runs-on: ubuntu-22.04
+     steps:
+       - name: checkout the code 
+         uses:  actions/checkout@v4
+
+       - name: print the name 
+         run: echo ${{secrets.NAME}} 
+
+  test:
+     runs-on: ubuntu-22.04
+     steps:
+       - name: checkout code
+         uses: actions/checkout@v4
+
+       - name: print the name 
+         run: echo "hello"
+
+         
+
+         
+     
