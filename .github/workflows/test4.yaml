@@ -1,0 +1,17 @@
+name : test-Ci
+
+
+on:
+  push:
+     branches:
+       - main
+
+jobs:
+   build:
+     runs-on: ubuntu-22.04
+     steps:
+       - name:  checkout
+         run:  actions/checkout@v4
+       - name: print
+         run: echo "Madhav" 
+  
